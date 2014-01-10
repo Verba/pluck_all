@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = PluckAll::VERSION
   spec.authors       = ["Stacey Touset"]
   spec.email         = ["stacey.touset@verbasoftware.com"]
-  spec.description   = %q{Add pluck_all to ActiveRecord}
-  spec.summary       = %q{Add pluck_all to ActiveRecord}
-  spec.homepage      = ""
+  spec.description   = %q{Upgrade pluck to act like Rails 4. Accepts zero, one, or multiple field names.}
+  spec.summary       = %q{Upgrade pluck to act like Rails 4}
+  spec.homepage      = "https://github.com/Verba/pluck_all"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

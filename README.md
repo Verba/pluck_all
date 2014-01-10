@@ -1,29 +1,28 @@
 # PluckAll
 
-TODO: Write a gem description
+Upgrade pluck to act like Rails 4. Accepts zero, one, or multiple field names.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'pluck_all'
+    gem 'pluck_all',
+        git: 'git@github.com:Verba/pluck_all',
+        branch: 'master'
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install pluck_all
-
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Model.pluck(:id)
+#=> [1, 2, 3]
 
-## Contributing
+Model.pluck(:id, :name)
+#=> [[1, "a"], [2, "b"], [3, "c"]]
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Model.pluck
+# Returns an array of every field for each row
+```
